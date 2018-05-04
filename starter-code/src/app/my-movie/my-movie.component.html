@@ -1,0 +1,61 @@
+<div class="container">
+  <h2><span class="room">Room {{currentMovie.room}}</span> {{currentMovie.title}}</h2>
+  <img [src]="currentMovie.poster">
+  <div class="details">
+
+    <div class="catContainer">
+      <span class="category">
+        <b>Genres</b>
+      </span>
+      <ul>
+        <li *ngFor="let genre of currentMovie.genres">
+          {{genre}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="catContainer">
+      <span class="category">
+        <b>Year</b>
+      </span>
+      <span>{{currentMovie.year}}</span>
+    </div>
+
+    <div class="catContainer">
+      <span class="category">
+        <b>Director</b>
+      </span>
+      <span>{{currentMovie.director}}</span>
+    </div>
+
+    <div class="catContainer">
+      <span class="category">
+        <b>Actors</b>
+      </span>
+      <ul>
+        <li *ngFor="let actor of currentMovie.actors">
+          {{actor}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="catContainer">
+      <span class="category">
+        <b>Schedule</b>
+      </span>
+      <ul>
+        <li *ngFor="let hour of currentMovie.hours">
+          {{hour}}
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      <b>Synopsis</b>
+    </p>
+    <p>{{currentMovie.synopsis}}</p>
+    <a routerLink="/home">
+      <button>Home</button>
+    </a>
+  </div>
+</div>

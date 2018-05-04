@@ -1,0 +1,62 @@
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.room {
+  color: lightslategray;
+  font-size: 0.8em;
+  display: inline-block;
+  width: 70px;
+}
+
+.catContainer {
+  display: flex;
+  align-items: initial;
+  margin: 10px 0;
+}
+
+.category {
+  display: inline-block;
+  width: 70px;
+  margin: 0 10px;
+}
+
+p {
+  margin: 10px;
+}
+
+img {
+  max-height: 350px;
+  max-width: 350px;
+  float: left;
+}
+
+.details {
+  float: left;
+  width: 500px;
+  margin-left: 50px;
+}
+
+ul {
+  list-style: none;
+  display: inline-block;
+  text-indent: -2.5em;
+  position: relative;
+  top: -15px;
+}
+
+button {
+  background-color: #217eb6;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  margin: 0 auto;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 0;
+}
+
+a {
+  text-decoration: none;
+}

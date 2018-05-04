@@ -1,0 +1,10 @@
+
+<ul>
+  <li *ngFor="let movie of movieService.getMovies()">
+    <a [routerLink]="['/movie', movie.id]">
+      <p>ROOM {{movie.room}}</p>
+      <img [src]="movie.poster">
+      <p>{{movie.title}}</p>
+    </a>
+  </li>
+</ul>
