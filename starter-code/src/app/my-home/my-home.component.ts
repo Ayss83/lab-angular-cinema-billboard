@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../movies.service';
 import { ActivatedRoute } from '@angular/router';
+import { Movie } from '../movies-data';
 
 @Component({
   selector: 'app-my-home',
@@ -8,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./my-home.component.css']
 })
 export class MyHomeComponent implements OnInit {
+  movieList: Movie[];
   movieId: number;
 
   constructor(
@@ -16,6 +18,7 @@ export class MyHomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.movieList = [...this.movieService.getMovies()]
     this.request.paramMap.subscribe(myParams => {
       this.movieId = Number(myParams.get("id"));
     })
